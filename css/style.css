@@ -59,7 +59,7 @@ h1,
 }
 @media only screen and (max-width: 1312px) {
   .block-left {
-    min-width: 450px;
+    min-width: 300px;
   }
 }
 @media only screen and (max-width: 1140px) {
@@ -69,12 +69,20 @@ h1,
   }
 }
 
+.search-block-title-main {
+  margin-top: 6px;
+}
+@media only screen and (max-width: 740px) {
+  .search-block-title-main {
+    margin-bottom: 60px;
+  }
+}
+
 .title-main {
   color: var(--color-bl);
   font-size: 64px;
   font-weight: 800;
   line-height: 64px;
-  margin-bottom: 32px;
 }
 @media only screen and (max-width: 655px) {
   .title-main {
@@ -95,6 +103,11 @@ h1,
 .block-numbers-holder {
   margin: 25px 0 52px;
 }
+@media only screen and (max-width: 740px) {
+  .block-numbers-holder {
+    display: none;
+  }
+}
 .block-numbers-big-num {
   font-size: 32px;
   color: var(--color-bl-2);
@@ -105,6 +118,9 @@ h1,
   .block-numbers-big-num {
     font-size: 30px;
   }
+}
+.block-numbers-text {
+  margin-top: -11px;
 }
 
 .text-special {
@@ -223,7 +239,13 @@ h1,
 }
 
 .about-us {
-  margin: 75px 0 10px;
+  margin: 115px 0 10px;
+}
+.about-us-text {
+  margin: 12px 0 67px 0;
+}
+.about-us-title-small {
+  margin-top: 24px;
 }
 .about-us-item {
   width: 416px;
@@ -253,13 +275,9 @@ h1,
   text-align: var(--text-align);
   font-size: 18px;
   font-weight: 500;
-  margin: 0 6px 40px;
-  padding-top: 7px;
 }
 
 .title-small {
-  margin: 0 0 12px;
-  padding-top: 23px;
   color: var(--color-bl);
   text-align: var(--text-align);
   font-size: 18px;
@@ -289,6 +307,7 @@ h1,
 .products-list-title {
   text-align: var(--text-align-left);
   line-height: 48px;
+  margin-top: 5px;
 }
 @media only screen and (max-width: 1312px) {
   .products-list-title {
@@ -299,7 +318,8 @@ h1,
 .products-list-desk {
   text-align: var(--text-align-left);
   line-height: 28px;
-  margin-bottom: 23px;
+  margin-bottom: 22px;
+  padding-top: 12px;
 }
 @media only screen and (max-width: 1312px) {
   .products-list-desk {
@@ -330,7 +350,8 @@ h1,
   max-width: 1050px;
 }
 .products-list-card-img-holder {
-  padding-bottom: 14px;
+  padding-bottom: 17px;
+  margin-top: 4px;
 }
 .products-list-card-img {
   display: block;
@@ -356,11 +377,16 @@ h1,
 }
 
 .categories-list-title {
-  margin-top: 116px;
+  margin: 99px 0 10px 0;
+}
+@media only screen and (max-width: 655px) {
+  .categories-list-title {
+    margin-top: 10px;
+  }
 }
 .categories-list-holder {
   background-color: var(--color-main);
-  margin-top: 75px;
+  margin-top: 98px;
 }
 .categories-list-card-items {
   row-gap: 8px;
@@ -370,6 +396,9 @@ h1,
   .categories-list-card-items {
     justify-content: center;
   }
+}
+.categories-list-card-text {
+  margin-top: 5px;
 }
 .categories-list-card-img {
   max-width: 100%;
@@ -411,7 +440,7 @@ h1,
   }
 }
 .categories-list-btn-holder {
-  margin-top: 24px;
+  margin-top: 13px;
 }
 .categories-list-btn {
   margin: 0 auto 101px;
@@ -427,25 +456,39 @@ h1,
 .reviews-list-title {
   text-align: var(--text-align-left);
 }
+@media only screen and (max-width: 1312px) {
+  .reviews-list-title {
+    text-align: var(--text-align);
+  }
+}
 .reviews-list-holder {
   column-gap: 30px;
   row-gap: 8px;
 }
+@media only screen and (max-width: 1312px) {
+  .reviews-list-holder {
+    justify-content: center;
+    align-items: center;
+  }
+}
 .reviews-list-card {
-  margin-top: 48px;
+  margin-top: 47px;
   background-color: var(--color-main);
   border-radius: 12px;
   width: 600px;
   padding: 38px 42px 0 48px;
 }
+.reviews-list-card-wrap {
+  margin-top: 28px;
+}
 .reviews-list-card-text {
   color: rgba(30, 30, 30, 0.75);
   text-align: var(--text-align-left);
+  margin-top: 8px;
 }
 .reviews-list-card-img {
   display: block;
-  margin-top: -57px;
-  margin-left: -23px;
+  margin: -57px -23px 0 0;
 }
 .reviews-list-card-img--second {
   margin-top: -46px;
@@ -479,6 +522,11 @@ h1,
   background-color: var(--color-main);
   margin-top: 230px;
 }
+@media only screen and (max-width: 1312px) {
+  .footer-holder {
+    margin-top: 100px;
+  }
+}
 .footer-block {
   padding-top: 48px;
 }
@@ -494,6 +542,9 @@ h1,
 }
 .footer-block-right {
   gap: 40px;
+}
+.footer-title-wrap {
+  margin-top: 8px;
 }
 .footer-text {
   margin: 24px 0;

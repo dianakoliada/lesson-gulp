@@ -71,17 +71,21 @@ h1,
 .block-left
     width: 39%
     +size-1312
-        min-width: 450px
+        min-width: 300px
     +size-1140
         width: 48%
         max-width: 500px
+
+.search-block-title-main
+    margin-top: 6px
+    +size-740
+        margin-bottom: 60px
 
 .title-main
     color: var(--color-bl)
     font-size: 64px
     font-weight: 800
     line-height: 64px
-    margin-bottom: 32px
     +size-655
         font-size: 38px
 
@@ -95,6 +99,8 @@ h1,
         margin: 0
     &-holder
         margin: 25px 0 52px
+        +size-740
+            display: none
     &-big-num
         font-size: 32px
         color: var(--color-bl-2)
@@ -102,6 +108,8 @@ h1,
         margin-bottom: 9px
         +size-655
             font-size: 30px
+    &-text
+        margin-top: -11px
 .text-special
     color: var(--color-bl-2)
     font-size: 18px
@@ -191,10 +199,15 @@ h1,
 
 // ================= about us =================
 .about-us
-    margin: 75px 0 10px
+    margin: 115px 0 10px
+
     &-title
     &-wrap
     &-text
+        margin: 12px 0 67px 0
+
+    &-title-small
+        margin-top: 24px
 
     &-item
         width: 416px
@@ -221,12 +234,8 @@ h1,
     text-align: var(--text-align)
     font-size: 18px
     font-weight: 500
-    margin: 0 6px 40px
-    padding-top: 7px
 
 .title-small
-    margin: 0 0 12px
-    padding-top: 23px
     color: var(--color-bl)
     text-align: var(--text-align)
     font-size: 18px
@@ -253,6 +262,7 @@ h1,
     &-title
         text-align: var(--text-align-left)
         line-height: 48px
+        margin-top: 5px
         +size-1312
             text-align: var(--text-align)
             padding-bottom: 0
@@ -260,7 +270,8 @@ h1,
     &-desk
         text-align: var(--text-align-left)
         line-height: 28px
-        margin-bottom: 23px
+        margin-bottom: 22px
+        padding-top: 12px
         +size-1312
             text-align: var(--text-align)
             margin: 21px 0
@@ -282,10 +293,11 @@ h1,
 
     &-card
         max-width: 1050px
-        // padding-left: 10px
 
     &-card-img-holder
-        padding-bottom: 14px
+        padding-bottom: 17px
+        margin-top: 4px
+
     &-card-img-link
     &-card-img
         display: block
@@ -316,13 +328,14 @@ h1,
     &-title-wrap
 
     &-title
-        margin-top: 116px
-
+        margin: 99px 0 10px 0
+        +size-655
+            margin-top: 10px
     &-text
 
     &-holder
         background-color: var(--color-main)
-        margin-top: 75px
+        margin-top: 98px
 
     &-card-items
         row-gap: 8px
@@ -331,6 +344,9 @@ h1,
             justify-content: center
 
     &-card
+
+    &-card-text
+        margin-top: 5px
 
     &-card-img-holder
 
@@ -367,7 +383,7 @@ h1,
             display: none
 
     &-btn-holder
-        margin-top: 24px
+        margin-top: 13px
 
     &-btn
         margin: 0 auto 101px
@@ -383,32 +399,38 @@ h1,
 
     &-title
         text-align: var(--text-align-left)
+        +size-1312
+            text-align: var(--text-align)
 
     &-holder
         column-gap: 30px
         row-gap: 8px
+        +size-1312
+            justify-content: center
+            align-items: center
 
     &-card
-        margin-top: 48px
+        margin-top: 47px
         background-color: var(--color-main)
         border-radius: 12px
         width: 600px
         padding: 38px 42px 0 48px
 
     &-card-wrap
+        margin-top: 28px
 
     &-text
 
     &-card-text
         color: rgba(30, 30, 30, 0.75)
         text-align: var(--text-align-left)
+        margin-top: 8px
 
     &-card-img-holder
 
     &-card-img
         display: block
-        margin-top: -57px
-        margin-left: -23px
+        margin: -57px -23px 0 0
 
     &-card-img--second
         margin-top: -46px
@@ -443,10 +465,11 @@ h1,
 
 // ================= footer =================
 .footer
-
     &-holder
         background-color: var(--color-main)
         margin-top: 230px
+        +size-1312
+            margin-top: 100px
 
     &-block
         padding-top: 48px
@@ -462,6 +485,7 @@ h1,
         gap: 40px
 
     &-title-wrap
+        margin-top: 8px
 
     &-logo
 
