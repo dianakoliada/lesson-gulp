@@ -1,0 +1,578 @@
+
+// Responsive breakpoints
+=size-1312
+    @media only screen and (max-width: 1312px)
+        @content
+
+=size-1140
+    @media only screen and (max-width: 1140px)
+        @content
+
+=size-1024
+    @media only screen and (max-width: 1024px)
+        @content
+
+=size-740
+    @media only screen and (max-width: 740px)
+        @content
+
+=size-655
+    @media only screen and (max-width: 655px)
+        @content
+
+:root
+    --color-main: #C1DCDC
+    --color-main-hover: #93b2b2
+    --color-bl: #000
+    --color-bl-2: #1E1E1E
+    --color-wh: #fff
+    --color-grey-rgb: #303030
+    --main-font: 'Poppins', sans-serif
+    --text-align: center
+    --text-align-left: left
+    --lh: normal
+
+body
+    font-family: var(--main-font)
+    line-height: var(--lh)
+
+*
+    box-sizing: border-box
+    text-decoration: none
+    margin: 0
+    padding: 0
+    list-style: none
+    // outline: 1px solid red
+
+p,
+h1,
+.input-holder
+    margin: 0
+
+.container
+    max-width: 1310px
+    margin: 0 auto
+    padding: 0 30px
+
+.flex
+    display: flex
+    flex-wrap: wrap
+
+.justify-content
+    justify-content: space-between
+
+.flex-center
+    justify-content: center
+    align-items: center
+
+.flex-direct
+    flex-direction: column
+
+.block-left
+    width: 39%
+    +size-1312
+        min-width: 450px
+    +size-1140
+        width: 48%
+        max-width: 500px
+
+.title-main
+    color: var(--color-bl)
+    font-size: 64px
+    font-weight: 800
+    line-height: 64px
+    margin-bottom: 32px
+    +size-655
+        font-size: 38px
+
+.block-numbers
+    border-right: 1px solid var(--color-bl-2)
+    padding-right: 48px
+    margin-right: 48px
+    &:last-child
+        border-right: none
+        padding: 0
+        margin: 0
+    &-holder
+        margin: 25px 0 52px
+    &-big-num
+        font-size: 32px
+        color: var(--color-bl-2)
+        font-weight: 500
+        margin-bottom: 9px
+        +size-655
+            font-size: 30px
+.text-special
+    color: var(--color-bl-2)
+    font-size: 18px
+    font-weight: 500
+
+.search-holder
+    max-width: 100%
+    min-height: 516px
+    background-color: var(--color-main)
+    padding: 48px
+    border-radius: 24px
+    position: relative
+    +size-1140
+        padding-bottom: 500px
+        justify-content: center
+    .search-input
+        display: inline-block
+        width: 100%
+        height: 64px
+        background-color: var(--color-wh)
+        border-radius: 12px
+        border: none
+        outline: none
+        padding: 0 70px 0 18px
+        &::placeholder
+            color: var(--color-4, rgba(30, 30, 30, 0.50))
+            font-size: 18px
+            font-weight: 500
+            +size-655
+                font-size: 16px
+
+    .input-holder
+        position: relative
+
+        .form-submit
+            position: absolute
+            top: 8px
+            right: 8px
+            width: 48px
+            height: 48px
+            background-color: var(--color-main)
+            border-radius: 12px
+            border: none
+            cursor: pointer
+            transition: 1s
+            &:focus-visible
+                outline: none
+            &:hover
+                background-color: var(--color-main-hover)
+    .icon-search
+
+.block-right
+    width: 60%
+
+.img-block
+
+.img
+    display: block
+    max-width: 100%
+    position: absolute
+    +size-655
+        max-width: 70%
+
+    &-arrow-right
+        top: 13px
+        right: 25px
+        +size-1140
+            display: none
+    &-rect
+        bottom: 0
+        right: 75px
+        +size-1140
+            left: 48%
+            transform: translateX(-50%)
+    &-plant-hand
+        bottom: 0
+        right: 57px
+        z-index: 2
+        +size-1140
+            left: 50%
+            transform: translateX(-50%)
+    &-arrow-left
+        bottom: 91px
+        right: 43%
+        +size-1312
+            display: none
+
+// ================= about us =================
+.about-us
+    margin: 75px 0 10px
+    &-title
+    &-wrap
+    &-text
+
+    &-item
+        width: 416px
+
+    &-img
+        width: 96px
+        height: 96px
+        background-color: var(--color-main)
+        border-radius: 50%
+        margin: -19px auto 4px
+
+.img-about-us
+    width: 40px
+    height: 40px
+
+.title
+    text-align: var(--text-align)
+    color: var(--color-bl-2)
+    font-size: 32px
+    font-weight: 700
+
+.text
+    color: var(--color-4, rgba(30, 30, 30, 0.50))
+    text-align: var(--text-align)
+    font-size: 18px
+    font-weight: 500
+    margin: 0 6px 40px
+    padding-top: 7px
+
+.title-small
+    margin: 0 0 12px
+    padding-top: 23px
+    color: var(--color-bl)
+    text-align: var(--text-align)
+    font-size: 18px
+    font-weight: 700
+
+// ================= products =================
+.products-list
+    margin-top: 93px
+    width: 100%
+
+    &-holder
+        width: 100%
+
+    &-title-holder
+        width: 20%
+        min-width: 256px
+        margin-bottom: 12px
+        +size-1312
+            width: 100%
+            text-align: center
+            justify-content: center
+            align-items: center
+
+    &-title
+        text-align: var(--text-align-left)
+        line-height: 48px
+        +size-1312
+            text-align: var(--text-align)
+            padding-bottom: 0
+
+    &-desk
+        text-align: var(--text-align-left)
+        line-height: 28px
+        margin-bottom: 23px
+        +size-1312
+            text-align: var(--text-align)
+            margin: 21px 0
+
+    &-btn
+        background-color: var(--color-main)
+        &:hover
+            background-color: var(--color-main-hover)
+
+    &-card-items
+        row-gap: 8px
+        column-gap: 43px
+        justify-content: space-between
+        width: 79%
+        +size-1312
+            justify-content: space-around
+            width: 100%
+            margin: 15px auto 0
+
+    &-card
+        max-width: 1050px
+        // padding-left: 10px
+
+    &-card-img-holder
+        padding-bottom: 14px
+    &-card-img-link
+    &-card-img
+        display: block
+        width: 100%
+        opacity: 1
+        &:hover
+            opacity: .7
+
+    &-card-content
+    &-card-title
+    &-card-price
+        text-align: var(--text-align-left)
+
+.btn
+    padding: 14px 30px
+    border-radius: 8px
+    transition: 1s
+    display: inline-flex
+
+.img-products-list
+
+.img-arrow
+    padding-left: 10px
+
+// ================= categories =================
+.categories-list
+
+    &-title-wrap
+
+    &-title
+        margin-top: 116px
+
+    &-text
+
+    &-holder
+        background-color: var(--color-main)
+        margin-top: 75px
+
+    &-card-items
+        row-gap: 8px
+        column-gap: 96px
+        +size-1312
+            justify-content: center
+
+    &-card
+
+    &-card-img-holder
+
+    &-card-img-link
+
+    &-card-img
+        max-width: 100%
+        transition: 1s ease
+        filter: brightness(70%)
+        &:hover
+            filter: brightness(100%)
+        &--one,
+        &--three
+            margin-top: -48px
+            +size-1312
+                margin-top: 0px
+                padding: 0 10px
+        &--two
+            margin-top: 48px
+            +size-1312
+                margin-top: 0px
+                padding: 0 10px
+
+    &-card-content
+
+    &-card-title
+        display: block
+        padding: 5px 0
+        text-align: var(--text-align)
+
+    &-card-text
+        margin-bottom: 10px
+        +size-1312
+            display: none
+
+    &-btn-holder
+        margin-top: 24px
+
+    &-btn
+        margin: 0 auto 101px
+        background-color: var(--color-wh)
+        &:hover
+            background-color: var(--color-main-hover)
+
+.img-categories-list
+
+// ================= reviews-list =================
+.reviews-list
+    margin-top: 96px
+
+    &-title
+        text-align: var(--text-align-left)
+
+    &-holder
+        column-gap: 30px
+        row-gap: 8px
+
+    &-card
+        margin-top: 48px
+        background-color: var(--color-main)
+        border-radius: 12px
+        width: 600px
+        padding: 38px 42px 0 48px
+
+    &-card-wrap
+
+    &-text
+
+    &-card-text
+        color: rgba(30, 30, 30, 0.75)
+        text-align: var(--text-align-left)
+
+    &-card-img-holder
+
+    &-card-img
+        display: block
+        margin-top: -57px
+        margin-left: -23px
+
+    &-card-img--second
+        margin-top: -46px
+
+    &-card-text-holder
+
+    &-card-name
+        margin: 0
+        padding-top: 0px
+
+    &-card-job
+        padding-top: 0px
+
+    .text-small
+
+    &-card-raiting
+        display: flex
+        gap: 20px
+        align-items: flex-start
+
+        &-img
+            margin-top: -2px
+
+        &-title
+            padding: 0
+            display: flex
+            align-items: center
+            gap: 6px
+
+    .title-special
+        text-transform: uppercase
+
+// ================= footer =================
+.footer
+
+    &-holder
+        background-color: var(--color-main)
+        margin-top: 230px
+
+    &-block
+        padding-top: 48px
+        +size-740
+            justify-content: center
+            align-items: center
+            text-align: center
+
+    &-block-left
+        padding: 0 30px 30px 0
+
+    &-block-right
+        gap: 40px
+
+    &-title-wrap
+
+    &-logo
+
+    &-text
+        margin: 24px 0
+        line-height: var(--lh)
+        text-align: var(--text-align-left)
+        +size-740
+            text-align: var(--text-align)
+
+    &-networks-items
+        width: 192px
+
+    &-networks-item
+
+    &-networks-link
+        width: 48px
+        height: 48px
+        outline: 1px solid var(--color-4, rgba(30, 30, 30, 0.50))
+        border-radius: 50%
+
+    &-networks-img
+
+    &-copyrigths
+
+    &-menu
+        text-align: var(--text-align-left)
+
+.copyright-text
+    margin: 98px 0 48px
+    +size-1140
+        display: none
+
+.info
+
+.menu-title
+    text-align: var(--text-align-left)
+    padding: 0
+
+.menu-items
+
+.menu-item
+    margin: 24px 0
+
+.menu-link
+    margin: 0
+    padding: 0
+
+.company
+
+.logo
+    color: var(--color-bl)
+    text-transform: uppercase
+    font-family: Quella
+    font-size: 18px
+    font-weight: 400
+    line-height: var(--lh)
+
+// ================= menu =================
+.nav-block
+
+    .btn-burger
+        display: none
+        +size-1024
+            display: block
+
+    &-holder
+        margin: 44px 0 40px
+
+    &-logo
+        width: 100%
+        flex-wrap: nowrap
+        align-items: center
+        +size-1024
+            justify-content: space-between
+        .logo-img
+            margin-right: 96px
+
+    .menu
+        &-items
+            flex-direction: row
+            row-gap: 8px
+            column-gap: 48px
+            +size-1024
+                flex-direction: column
+        &-item
+            margin: 0
+
+        &-link
+
+        &-link--active
+            color: var(--color-bl-2)
+        &-btn-list
+            gap: 48px
+            margin-left: auto
+            +size-1024
+                margin-left: 0
+                padding: 30px 0
+        &-mobile-holder
+            display: flex
+            width: 100%
+            +size-1024
+                position: absolute
+                top: -100%
+                left: 0
+                padding: 0 30px
+                background-color: #fff
+                z-index: 9
+                flex-direction: column
+                transition: 0.45s
+            &.active
+                top: 80px
+    .btn-burger
+        cursor: pointer
