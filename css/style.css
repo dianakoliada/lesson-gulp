@@ -72,6 +72,11 @@ h1,
 .search-block-title-main {
   margin-top: 6px;
 }
+@media only screen and (max-width: 1140px) {
+  .search-block-title-main {
+    text-align: var(--text-align);
+  }
+}
 @media only screen and (max-width: 740px) {
   .search-block-title-main {
     margin-bottom: 60px;
