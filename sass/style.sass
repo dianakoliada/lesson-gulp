@@ -199,6 +199,8 @@ h1,
         +size-1140
             left: 48%
             transform: translateX(-50%)
+        +size-497
+            display: none
     &-plant-hand
         bottom: 0
         right: 57px
@@ -228,7 +230,6 @@ h1,
         margin-top: 24px
 
     &-item
-        // margin: 58px 0 0
         width: 416px
 
     &-img
@@ -490,8 +491,7 @@ h1,
         gap: 20px
         align-items: flex-start
         +size-497
-            align-items: center
-            justify-content: center
+            display: none
 
         &-img
             margin-top: -2px
@@ -527,8 +527,6 @@ h1,
 
     &-block-right
         gap: 40px
-        +size-497
-            justify-content: space-around
 
     &-title-wrap
         margin-top: 8px
@@ -559,6 +557,10 @@ h1,
 
     &-menu
         text-align: var(--text-align-left)
+        +size-497
+            text-align: var(--text-align)
+            width: 100%
+            margin: 0 auto
 
 .copyright-text
     margin: 98px 0 48px
@@ -570,6 +572,8 @@ h1,
 .menu-title
     text-align: var(--text-align-left)
     padding: 0
+    +size-497
+        text-align: var(--text-align)
 
 .menu-items
 
