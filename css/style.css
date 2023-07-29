@@ -30,8 +30,18 @@ h1,
   margin: 0;
 }
 
+span {
+  display: inline-block;
+}
+
 .container {
   max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.container-large {
+  max-width: 1610px;
   margin: 0 auto;
   padding: 0 30px;
 }
@@ -801,6 +811,9 @@ h1,
 .categories-btn:hover {
   text-decoration: underline;
 }
+.categories-title {
+  text-transform: uppercase;
+}
 @media only screen and (max-width: 1312px) {
   .categories-title {
     text-align: var(--text-align-left);
@@ -834,4 +847,85 @@ h1,
 }
 .categories-card-img {
   border-radius: 24px;
+}
+.catalogue-list {
+  margin-top: 130px;
+}
+.catalogue-list-card-items {
+  column-gap: 67px;
+  row-gap: 40px;
+}
+@media only screen and (max-width: 1596px) {
+  .catalogue-list-card-items {
+    justify-content: center;
+  }
+}
+.catalogue-list-card-img-link {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.catalogue-list-card-img {
+  width: 100%;
+  border-radius: 24px;
+}
+.catalogue-list-title {
+  color: var(--color-bl);
+}
+.catalogue-list-category {
+  text-align: var(--text-align-left);
+}
+.catalogue-list-article {
+  text-align: var(--text-align-left);
+}
+
+.product-card-holder {
+  column-gap: 80px;
+  row-gap: 40px;
+  margin: 100px 0;
+}
+@media only screen and (max-width: 1312px) {
+  .product-card-holder {
+    justify-content: center;
+    align-items: center;
+  }
+}
+.product-card-img {
+  width: 100%;
+}
+.product-card-info-holder {
+  margin-bottom: 150px;
+}
+.product-card-info-title {
+  display: block;
+  padding-bottom: 50px;
+}
+.product-card-form-input {
+  border: 1px solid var(--color-4, rgba(30, 30, 30, 0.5));
+  width: 120px;
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 20px;
+}
+.product-card-form-btn {
+  width: 220px;
+  height: 60px;
+  outline: none;
+  border: none;
+  background-color: var(--color-main);
+}
+
+.text-special--success {
+  color: #25a244;
+}
+
+.info-text {
+  padding-left: 20px;
+}
+
+.form-text {
+  cursor: pointer;
 }
