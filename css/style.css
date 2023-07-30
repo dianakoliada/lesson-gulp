@@ -989,3 +989,17 @@ span {
   margin-top: 20px;
   border-bottom: 1px solid var(--color-4, rgba(30, 30, 30, 0.5));
 }
+
+.cart-done-text {
+  padding: 10px 0;
+}
+.cart-done-number {
+  display: block;
+  font-size: 40px;
+}
+.cart-done-pic-holder {
+  max-width: 15%;
+}
+.cart-done-pic {
+  width: 100%;
+}
