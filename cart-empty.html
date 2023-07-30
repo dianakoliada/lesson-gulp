@@ -1,0 +1,28 @@
+@@include('blocks/head.html', {
+"title":"Shopping cart"
+})
+
+@@include('blocks/block-nav.html')
+
+<div class="cart-empty">
+    <div class="container-sm">
+        <div class="cart-empty-holder flex flex-center flex-direct">
+            <div class="cart-empty-title-holder">
+                <h1 class="cart-empty-title title">SHOPPING CART</h1>
+            </div>
+            <div class="cart-empty-icon-holder">
+                <img src="../src/img/shopping-cart/shopping-cart (1).png" alt="shopping cart" class="cart-empty-icon">
+            </div>
+            <div class="cart-empty-text-holder">
+                <p class="cart-empty-text title">
+                    Your cart is empty now
+                </p>
+                <a href="../html/products.html" class="cart-empty-text text-special text-sm">
+                    Back to the store
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@@include('blocks/footer.html')
