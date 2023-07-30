@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --color-main: #C1DCDC;
   --color-main-hover: #93b2b2;
@@ -791,9 +792,6 @@ span {
   cursor: pointer;
 }
 
-.categories {
-  margin-bottom: -100px;
-}
 .categories-title-holder {
   display: flex;
   flex-direction: column;
@@ -1002,4 +1000,76 @@ span {
 }
 .cart-done-pic {
   width: 100%;
+}
+
+label,
+input,
+select,
+option {
+  display: block;
+}
+
+.color-padding {
+  color: var(--color-4, rgba(30, 30, 30, 0.5));
+  padding-top: 10px;
+}
+
+.input {
+  width: 100%;
+  height: 36px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--color-4, rgba(30, 30, 30, 0.1));
+  padding-left: 10px;
+}
+.input::placeholder {
+  color: var(--color-4, rgba(30, 30, 30, 0.2));
+}
+
+input[type=radio] {
+  display: none;
+  /* Стилізація квадратного вибору */
+}
+
+input[type=radio] + label {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #fdfdfd;
+  border: 2px solid var(--color-4, rgba(30, 30, 30, 0.2));
+  cursor: pointer;
+  padding-right: 10px;
+  /* Стилізація вибраного квадратного вибору */
+}
+
+input[type=radio]:checked + label {
+  background-color: #7d7d7d;
+}
+
+.label-pay {
+  margin-left: 20px;
+}
+
+.cart-purchase {
+  margin-top: 110px;
+}
+.cart-purchase-text {
+  text-align: var(--text-align-left);
+  margin-bottom: 30px;
+}
+.cart-purchase-holder {
+  margin-top: 70px;
+}
+.cart-purchase-form-holder {
+  border-right: 1px solid var(--color-4, rgba(30, 30, 30, 0.1));
+  padding-right: 130px;
+}
+.cart-purchase-phone {
+  margin-bottom: 50px;
+}
+.cart-purchase-post-office {
+  margin-bottom: 50px;
+}
+.cart-purchase-link-privacy {
+  text-decoration: underline;
 }
