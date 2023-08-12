@@ -32,6 +32,25 @@ svg.icon {
   position: relative;
 }
 
+svg.icon-arrow {
+  top: 4px;
+  left: 9px;
+  --size: 1.2em;
+}
+
+svg.icon-about-us {
+  --size: 100px;
+}
+
+svg.icon-footer {
+  --size: 25px;
+  color: var(--color-bl-2);
+}
+
+svg.icon-footer--twitter {
+  --size: 50px;
+}
+
 p,
 h1,
 .input-holder {
@@ -339,10 +358,6 @@ span {
   text-align: var(--text-align);
   font-size: 18px;
   font-weight: 700;
-}
-
-svg.icon-about-us {
-  --size: 100px;
 }
 
 .products-list {
@@ -743,15 +758,6 @@ svg.icon-about-us {
   line-height: var(--lh);
 }
 
-svg.icon-footer {
-  --size: 25px;
-  color: var(--color-bl-2);
-}
-
-svg.icon-footer--twitter {
-  --size: 50px;
-}
-
 .nav-block .btn-burger {
   display: none;
 }
@@ -905,6 +911,20 @@ svg.icon-footer--twitter {
     justify-content: center;
   }
 }
+.catalogue-list-card {
+  border: 1px solid #ccc;
+  width: 300px;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+.catalogue-list-card-img-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
 .catalogue-list-card-img-link {
   width: 100%;
   display: flex;
@@ -913,7 +933,8 @@ svg.icon-footer--twitter {
 }
 .catalogue-list-card-img {
   width: 100%;
-  border-radius: 24px;
+  max-height: 200px;
+  object-fit: cover;
 }
 .catalogue-list-title {
   color: var(--color-bl);
