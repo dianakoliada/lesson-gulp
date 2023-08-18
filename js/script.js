@@ -17,7 +17,6 @@ function getProducts() {
 
             // Диструктуризація масива
             const { products } = res;
-            console.log("products: ", products);
 
             // Виводимо товари на сторінку
             products.forEach(el => {
@@ -29,7 +28,7 @@ function getProducts() {
                     'afterbegin',
                     `<div class="products-list-card catalogue-list-card">
                         <div class="products-list-card-img-holder catalogue-list-card-img-holder">
-                            <a href="../html/product.html" class="products-list-card-img-link catalogue-list-card-img-link">
+                            <a href="../html/product.html" class="products-list-card-img-link catalogue-list-card-img-link" id="js-card">
                                 <img src=${thumbnail} alt=${title} class="catalogue-list-card-img">
                             </a>
                         </div>
@@ -52,5 +51,7 @@ function getProducts() {
                 )
             })
         })
+
 }
 getProducts();
+

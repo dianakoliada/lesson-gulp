@@ -4,12 +4,16 @@
 
     &-holder
         width: 100%
+        column-gap: 10px
+        justify-content: center
 
     &-title-holder
-        width: 20%
-        min-width: 256px
+        display: flex
+        flex-direction: column
+        max-width: 276px
         margin-bottom: 12px
         +size-1312
+            max-width: 280px
             width: 100%
             text-align: center
             justify-content: center
@@ -65,6 +69,8 @@
 
     &-card-content
     &-card-title
+        +size-955
+            text-align: var(--text-align)
     &-card-price
         text-align: var(--text-align-left)
 
