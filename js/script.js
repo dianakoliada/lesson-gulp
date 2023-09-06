@@ -11,9 +11,10 @@ function getProducts() {
     const productList = document.querySelector('#productList');
 
     // Звертаємося то api всіх товарів
-    fetch('https://dummyjson.com/products')
+    fetch('https://dummyjson.com/products/')
         .then(res => res.json())
         .then(res => {
+            // console.log("res: ", res);
 
             // Диструктуризація масива
             const { products } = res;
@@ -21,14 +22,14 @@ function getProducts() {
             // Виводимо товари на сторінку
             products.forEach(el => {
                 // Диструктуризація товару
-                const { title, price, category, stock, thumbnail } = el;
+                const { id, title, price, category, stock, thumbnail } = el;
 
                 // Виводимо товари в каталог
                 productList.insertAdjacentHTML(
-                    'afterbegin',
+                    'beforeend',
                     `<div class="products-list-card catalogue-list-card">
                         <div class="products-list-card-img-holder catalogue-list-card-img-holder">
-                            <a href="../html/product.html" class="products-list-card-img-link catalogue-list-card-img-link" id="js-card">
+                            <a href="../html/product.html?id=${id}&type=product" class="products-list-card-img-link catalogue-list-card-img-link" id="js-card">
                                 <img src=${thumbnail} alt=${title} class="catalogue-list-card-img">
                             </a>
                         </div>
@@ -54,4 +55,5 @@ function getProducts() {
 
 }
 getProducts();
+
 
