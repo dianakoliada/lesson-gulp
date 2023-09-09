@@ -1,46 +1,23 @@
 // Як витягувати значення з GET параметрів ++
 // Зробити окрему функцію, яка буде витягувати єдиний товар по id++
-// ПЕРЕВІРКИ
-
-// Отримання URL - адреси сторінки:
-const url = window.location.href;
-console.log(url);
-
-//Розділення URL на частини:
-const urlParts = url.split('?');
-
-//Отримання основної частини URL:
-const baseUrl = urlParts[0];
-
-//Отримання рядка з GET-параметрами:
-const queryParams = urlParts[1];
-
-//Розділення рядка з GET-параметрами на окремі параметри:
-const params = queryParams.split('&');
-
-//Розділення кожного параметра на ключ і значення:
-const firstParam = params[0].split('=');
-const secondParam = params[1].split('=');
-
-//Створення об'єкта для зберігання значень параметрів:
-const paramsObj = {};
-
-// Проходження через кожен параметр і зберігання його значення в об'єкті
-for (let i = 0; i < params.length; i++) {
-    const param = params[i].split('=');
-    const paramName = decodeURIComponent(param[0]);
-    const paramValue = decodeURIComponent(param[1]);
-    paramsObj[paramName] = paramValue;
-}
-
-const id = paramsObj['id'];
-const type = paramsObj['type'];
-
+// ПЕРЕВІРКИ++
 function getProduct() {
+
+    // Диструктуризація об'єкта
+    const { id, type } = getUrlParams();
+
+    // Робимо перевірку на type = product
+    if (isTypeExist(type, 'product'))
+        return;
+
+    // Перевірка чи існує id товару
+    if (isUndefined(id))
+        window.location.href = "home.html";
+
     // Витягуємо елемент в який будемо поміщати товар
     const productCard = document.querySelector('#productCard');
 
-    // Звертаємося то api всіх товарів
+    // Звертаємося до api потрібного товару
     fetch('https://dummyjson.com/products/' + id)
         .then(res => res.json())
         .then(res => {
@@ -97,6 +74,7 @@ function getProduct() {
 };
 
 getProduct();
+
 
 
 
