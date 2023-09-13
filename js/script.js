@@ -8,7 +8,12 @@ document.querySelector('#js-cart-added-btn').onclick = () => document.querySelec
 function isUndefined(data) { return data == undefined }
 function isTypeExist(type, needType) { return isUndefined(type) || type != needType }
 
-
+// Перевіряємо щоб в інпут вибору кількості товарів були лише числа
+const onTypeHandler = (event => {
+    if (!parseInt(event.key)) {
+        event.preventDefault();
+    }
+})
 
 
 

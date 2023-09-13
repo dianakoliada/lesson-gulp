@@ -19,6 +19,7 @@ function getProducts() {
 
             // Виводимо товари на сторінку
             products.forEach(el => {
+
                 // Диструктуризація товару
                 const { id, title, price, category, stock, thumbnail } = el;
 
