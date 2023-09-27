@@ -49,7 +49,8 @@ function displayCartItems() {
 
         cart.forEach(
             function (el, index) {
-                const { thumbnail, title, price, id } = el;
+
+                const { thumbnail, title, price, id, count } = el;
 
                 cartAddedList.insertAdjacentHTML(
                     'beforeend',
@@ -57,14 +58,14 @@ function displayCartItems() {
                         <button class="cart-added-list__item-btn-delete btn-light js-remove-product" data-index="${index}"><svg class='icon icon-close'><use xlink:href='#icon-close'></use></svg></button>
                         <img src="${thumbnail}" alt="" class="cart-added-list__item-img">
                         <p class="cart-added-list__item-text-hold">
-                            <a href="#" class="cart-added-list__item-title-link">Назва товару: ${title}</a>
+                            <a href="#" class="cart-added-list__item-title-link">${title}</a>
                             <span class="cart-added-list__item-meta-list">
                             <span class="cart-added-list__item-meta">Ціна: ${price} грн</span>
                             </span>
                         </p>
-                        <input type="text" class="input-js cart-added-list__item-count" placeholder="0" value="1" id="input-count-${id}" onkeypress="onTypeHandler(event)">
-                        <button class="cart-added-list__item-btn-plus btn-light js-count" data-type="plus" data-input="#input-count-${id}"></button>
-                        <button class="cart-added-list__item-btn-minus btn-light js-count" data-type="minus" data-input="#input-count-${id}"></button>
+                        <input type="text" class="input-js cart-added-list__item-count" placeholder="0" value="${count}" id="input-count-${id}" onkeypress="onTypeHandler(event)" readonly>
+                        <button class="cart-added-list__item-btn-plus btn-light js-count" data-type="plus" data-input="#input-count-${id}" data-index="${index}"></button>
+                        <button class="cart-added-list__item-btn-minus btn-light js-count" data-type="minus" data-input="#input-count-${id}" data-index="${index}"></button>
                     </div>`
                 );
             }
@@ -143,15 +144,51 @@ function removeProduct(el) {
 
 
 // Слідкуємо за кліком по цьому списку
-productList.onclick = (event) => {
+if (productList) {
+    productList.onclick = (event) => {
 
-    // Поточний елемент по якому був клік
-    const el = event.target;
+        // Поточний елемент по якому був клік
+        const el = event.target;
 
-    // Перевіряєо чи клік був по потрібно нам елементі
-    if (el.classList.contains('js-add-product')) {
-        addNewProduct(el);
+        // Перевіряєо чи клік був по потрібно нам елементі
+        if (el.classList.contains('js-add-product')) {
+            addNewProduct(el);
+        }
     }
+}
+
+// підрахунок кількіості в товарів
+function setCountProduct(el) {
+
+    //отримуємо атрибут із елемента (plus or minus)
+    const btnTypeVal = el.getAttribute('data-type');
+
+    //отримуємо атрибут з кнопки, щоб зв'язати з інпутом
+    const dataInputVal = el.getAttribute('data-input');
+
+    //зберігаю необхідний інпут
+    let input = document.querySelector(dataInputVal);
+
+    // Отримуємо поточне значення інпута 
+    const count = parseInt(input.value);
+
+    if (btnTypeVal === 'plus') {
+        input.value++;
+    }
+
+    //робимо перевірку для того щоб НЕ можна було отримати 0 або від'ємне значення інпута
+    if (btnTypeVal === 'minus' && count > 1) {
+        input.value--;
+    }
+
+    // Ключ в масиві cart
+    const cartIndex = el.getAttribute('data-index');
+
+    // Оновлювати цифру в масиві віносно товару
+    cart[cartIndex].count = input.value;
+
+    // Зберігати корзину в localstorage
+    saveCartToLocalStorage();
 }
 
 
@@ -165,40 +202,11 @@ cartAddedList.onclick = (event) => {
     if (el.classList.contains('js-remove-product')) {
         removeProduct(el)
     }
+
+    // Перевіряєо чи клік був по кнопці кількості
+    if (el.classList.contains('js-count')) {
+        setCountProduct(el)
+    }
 }
 
 
-//ПЕРЕМИКАЧ КІЛЬКОСТІ ТОВАРІВ В КОРЗИНІ-СМ
-
-const buttons = document.querySelectorAll('.js-count');
-const inputs = document.querySelectorAll('.input-js');
-
-//перебираємо всі кнопки та вішаємо прослушку на елемент (btn)
-buttons.forEach((btn) => {
-    //вішаємо подію клік на елемент
-    btn.onclick = (event) => {
-        //зберігаємо значення, який саме елемент ми клікнули
-        const el = event.target;
-
-        //отримуємо атрибут із елемента (plus or minus)
-        const btnTypeVal = el.getAttribute('data-type');
-
-        //отримуємо атрибут з кнопки, щоб зв'язати з інпутом
-        const dataInputVal = el.getAttribute('data-input');
-
-        //зберігаю необхідний інпут
-        let input = document.querySelector(dataInputVal);
-
-        // Отримуємо поточне значення інпута 
-        const count = parseInt(input.value);
-
-        if (btnTypeVal === 'plus') {
-            input.value++;
-        }
-
-        //робимо перевірку для того щоб НЕ можна було отримати 0 або від'ємне значення інпута
-        if (btnTypeVal === 'minus' && count > 1) {
-            input.value--;
-        }
-    }
-})

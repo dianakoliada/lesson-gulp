@@ -1,5 +1,5 @@
 document.querySelector("#js-btn-burger").onclick = function () {
-    document.querySelector("#js-menu-mobile").classList.toggle("active");
+  document.querySelector("#js-menu-mobile").classList.toggle("active");
 };
 
 // Показуємо і приховуємо добавлені товари
@@ -10,10 +10,11 @@ function isTypeExist(type, needType) { return isUndefined(type) || type != needT
 
 // Перевіряємо щоб в інпут вибору кількості товарів були лише числа
 const onTypeHandler = (event => {
-    if (!parseInt(event.key)) {
-        event.preventDefault();
-    }
+  if (!parseInt(event.key)) {
+    event.preventDefault();
+  }
 })
+
 
 
 

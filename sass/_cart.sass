@@ -1,187 +1,189 @@
 //Cart empty
 .cart-empty
 
-    &-holder
-        row-gap: 100px
-        +size-655
-            row-gap: 50px
+  &-holder
+    row-gap: 70px
+    +size-655
+      row-gap: 50px
 
-    &-title-holder
-        margin-top: 70px
+  &-title-holder
+    margin-top: 70px
 
-    &-title
-        text-transform: uppercase
-        font-size: 50px
-        +size-655
-            font-size: 42px
-        +size-497
-            font-size: 32px
+  &-title
+    text-transform: uppercase
+    font-size: 40px
+    +size-655
+      font-size: 32px
+      +size-497
+        font-size: 22px
 
-    &-icon-holder
-        max-width: 30%
+  &-icon-holder
+    width: 30%
 
-    &-icon
-        width: 100%
+  &-icon
+    width: 100%
 
-    &-text-holder
-        text-align: var(--text-align)
+  &-text-holder
+    text-align: var(--text-align)
 
     &-text
-        color: var(--color-4, rgba(30, 30, 30, 0.5))
-        +size-655
-            font-size: 24px
+      color: var(--color-4, rgba(30, 30, 30, 0.5))
+      +size-655
+        font-size: 24px
         +size-497
-            font-size: 20px
+          font-size: 20px
 
 .text-sm
-    display: inline-block
-    margin-top: 20px
-    border-bottom: 1px solid var(--color-4, rgba(30, 30, 30, 0.5))
+  display: inline-block
+  margin-top: 20px
+  border-bottom: 1px solid var(--color-4, rgba(30, 30, 30, 0.5))
 
-//Cart empty
+//Cart done
 .cart-done
-    &-holder
+  &-holder
     &-title-holder
     &-title
     &-icon-holder
     &-icon
     &-text-holder
     &-text
-        padding: 10px 0
+      padding: 10px 0
 
-    &-number
-        display: block
-        font-size: 40px
+  &-number
+    display: block
+    font-size: 40px
 
-    &-pic-holder
-        max-width: 15%
+  &-pic-holder
+    max-width: 15%
 
-    &-pic
-        width: 100%
+  &-pic
+    width: 100%
 
 //Cart-purchase
 label,
 input,
 select,
 option
-    display: block
+  display: block
 
 .color-padding
-    color: var(--color-4, rgba(30, 30, 30, 0.5))
-    padding-top: 10px
+  color: var(--color-4, rgba(30, 30, 30, 0.5))
+  padding-top: 10px
 
 .input
-    width: 100%
-    height: 36px
-    outline: none
-    border: none
-    border-bottom: 1px solid var(--color-4, rgba(30, 30, 30, 0.1))
-    padding-left: 10px
-    &::placeholder
-        color: var(--color-4, rgba(30, 30, 30, 0.2))
+  width: 100%
+  height: 36px
+  outline: none
+  border: none
+  border-bottom: 1px solid var(--color-4, rgba(30, 30, 30, 0.1))
+  padding-left: 10px
+  &::placeholder
+    color: var(--color-4, rgba(30, 30, 30, 0.2))
 
 .label-pay
-    margin-left: 20px
+  margin-left: 20px
 
 .cart-purchase
-    margin-top: 110px
+  margin-top: 110px
 
-    &-title-holder
+  &-title-holder
 
-    &-title
+  &-title
 
-    &-text
-        text-align: var(--text-align-left)
-        margin-bottom: 30px
-        // margin-top: 50px
+  &-text
+    text-align: var(--text-align-left)
+    margin-bottom: 30px
 
-    &-holder
-        margin-top: 70px
+  &-holder
+    margin-top: 70px
 
-    &-form-holder
-        border-right: 1px solid var(--color-4, rgba(30, 30, 30, 0.1))
-        padding-right: 60px
-    &-form
+  &-form-holder
+    border-right: 1px solid var(--color-4, rgba(30, 30, 30, 0.1))
+    padding-right: 60px
+  &-form
 
-    &-name
+  &-name
 
-        &-label
+    &-label
 
-        &-input
+      &-input
 
-    &-email
+  &-email
 
-        &-label
+    &-label
 
-        &-input
+      &-input
 
-    &-phone
-        margin-bottom: 50px
+  &-phone
+    margin-bottom: 50px
 
-        &-label
+  &-label
 
-        &-input
+  &-input
 
-    &-delivery-option
+  &-delivery-option
 
-    &-delivery-label
+  &-delivery-label
 
-    &-city-option
+  &-city-option
 
-    &-city-label
+  &-city-label
 
-    &-post-office
-        margin-bottom: 50px
+  &-post-office
+    margin-bottom: 50px
 
-        &-label
+  &-label
 
-    &-pay
+  &-pay
 
-        &-label
+  &-label
 
-    &-submit-holder
+  &-submit-holder
 
-    &-submit
-        border: 0
-        margin: 40px 0 70px
+  &-submit
+    border: 0
+    margin: 40px 0 70px
 
-    &-text-privacy
+  &-text-privacy
 
-    &-link-privacy
-        text-decoration: underline
+  &-link-privacy
+    text-decoration: underline
 
-    &-goods
-        padding-left: 60px
+  &-goods
+    padding-left: 60px
 
-    &-text
+  &-text
 
-    &-card
-        display: flex
-        flex-direction: row
-        justify-content: flex-start
-        align-items: center
-        border-bottom: 1px solid var(--color-4, rgba(30, 30, 30, 0.1))
-        padding-bottom: 10px
-        margin-top: 10px
-        &:last-child
-            border-bottom: none
-            padding: 0
-            margin: 0
+  &-card
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    align-items: center
+    border-bottom: 1px solid var(--color-4, rgba(30, 30, 30, 0.1))
+    padding-bottom: 10px
+    margin-top: 10px
+    &:last-child
+      border-bottom: none
+      padding: 0
+      margin: 0
 
-        &-img-holder
-            width: 20%
-            margin-right: 30px
-            background-color: blue
+    &-img-holder
+      width: 20%
+      margin-right: 30px
 
-        &-img
-            width: 100%
+    &-img
+      width: 100%
 
-        &-info-holder
+      &-info-holder
 
         &-info
 
     &-total-price-holder
-        margin-top: 40px
+      margin-top: 40px
 
-    &-total-price
-        text-align: var(--text-align-left)
+  &-total-price
+    text-align: var(--text-align-left)
+
+.cart-purchase-info
+  color: var(--color-4, rgba(30, 30, 30, 0.4))
+  font-size: 14px
