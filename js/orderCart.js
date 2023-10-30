@@ -60,10 +60,6 @@ function showOrderCart() {
 showOrderCart();
 
 
-
-
-
-
 function sendEmail(formData) {
    // Робимо запит на сервер
    fetch('https://api.inderio.com/send-email', {

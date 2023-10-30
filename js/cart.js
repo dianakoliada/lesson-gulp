@@ -49,7 +49,6 @@ function displayCartItems() {
 
         cart.forEach(
             function (el, index) {
-
                 const { thumbnail, title, price, id, count } = el;
 
                 cartAddedList.insertAdjacentHTML(
@@ -84,12 +83,13 @@ displayCartItems();
 
 /**
  * Вивід товарів до html
- * @param {*} el - Елемент кнопки з якою будемо працювати 
+ * el - Елемент кнопки з якою будемо працювати 
  */
 function addNewProduct(el) {
     // Збираємо дані про добавлений товар
-    //dataset - ми додали атрибути до кнопки + в файлі getProduct.js, щоб витягти їх тут
+    //dataset - ми додали атрибути до кнопки + в файлі getProducts.js, щоб витягти їх тут
     const product = el.dataset;
+    console.log("product: ", product);
 
     // Перевіряємо чи корзина пуста
     if (cart.length == 0) {
@@ -183,6 +183,7 @@ function setCountProduct(el) {
 
     // Ключ в масиві cart
     const cartIndex = el.getAttribute('data-index');
+    console.log("cartIndex: ", cartIndex);
 
     // Оновлювати цифру в масиві віносно товару
     cart[cartIndex].count = input.value;
